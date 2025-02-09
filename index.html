@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARYAN Profile</title>
+    <title>ARYAN PROTOFILE</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script defer src="script.js"></script>
@@ -23,25 +23,26 @@
             </div>
             <nav class="nav navbar-nav navbar-right">
                 <ul class="nav navbar-nav">
-                   
-                        <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a> </li>
-                       <li><a href="#contact">Contact</a></li>
-                    
-                    
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
+<br>
+<br>
+<br>
+<br> <br> <br> <br>
+<br><br><br><br>
     <section id="about" class="about container-fluid">
         <div class="row">
-            <div class="col-sm-6 col-sm-12 text-center">
+            <div class="col-sm-6 col-xs-12 text-center">
                 <img src="image/IMG_20240401_195517_674.jpg" alt="ARYAN THAKUR" class="profile-img img-responsive center-block">
                 <h2>ARYAN THAKUR</h2>
                 <p class="profession">Fitness Enthusiast | Gym Member | Personal Growth Advocate</p>
             </div>
-            <div class="col-sm-6 col-sm-12">
+            <div class="col-sm-6 col-xs-12">
                 <h3>About Me</h3>
                 <p>Welcome to my profile. Hi, my name is ARYAN THAKUR, and I’ve been a proud member of a Gym for 1 year 2 months. Fitness has become an essential part of my life, not just for physical health but for mental clarity and personal growth.</p>
 
@@ -60,69 +61,63 @@
         </div>
     </section>
 
+    <section id="achievements" class="achievements container-fluid">
+        <h2 class="text-center">Achievements & Skills</h2>
+        <ul>
+            <li>🏆 Bench Press: 80kg completed</li>
+            <li>🔥 Deadlift: 150kg achieved</li>
+            <li>💪 Squat: 90kg goal completed</li>
+            <li>🎯 ARM WRESTLING :PENDING</li>
+            <li>🚀 Passionate about Personal Growth & Motivation</li>
+        </ul>
+    </section>
+
     <section id="portfolio" class="portfolio container-fluid">
         <h2 class="text-center">Portfolio</h2>
         <div class="row">
-            <div class="col-sm-6 col-sm-12 portfolio-item">
+            <div class="col-sm-6 col-xs-12 portfolio-item">
                 <img src="image/images.jpeg" alt="Project 1" class="img-responsive">
                 <h3>Chest</h3>
-                <p>"Achieved 100+ kg bench press goal in 2025."
-                </p>
+                <p>"Achieved 100+ kg bench press goal in 2025."</p>
+                <br>
+                <h3>Bench Press</h3>
+                <div class="progress">
+                    <div id="bench-progress" class="progress-bar progress-bar-success" role="progressbar" style="width: 80%;">
+                        80kg / 100kg
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-6 col-sm-12 portfolio-item">
+            <div class="col-sm-6 col-xs-12 portfolio-item">
                 <img src="image/download.jpeg" alt="Project 2" class="img-responsive">
                 <h3>Back</h3>
                 <p>150+ Deadlift in 2025.</p>
+                <br>
+                <h3>Deadlift</h3>
+                <div class="progress">
+                    <div id="deadlift-progress" class="progress-bar progress-bar-info" role="progressbar" style="width: 75%;">
+                        120kg / 150kg
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-6 col-sm-12 portfolio-item">
+            <div class="col-sm-6 col-xs-12 portfolio-item">
                 <img src="image/images (1).jpeg" alt="Project 3" class="img-responsive">
                 <h3>Legs</h3>
                 <p>120+ leg in 2025.</p>
+                <br>
+                <h3>Squat</h3>
+                <div class="progress">
+                    <div id="squat-progress" class="progress-bar progress-bar-warning" role="progressbar" style="width: 50%;">
+                        90kg / 120kg
+                    </div>
+                </div>
             </div>
         </div>
-        <section id="progress" class="progress-tracker container-fluid">
-            <h2 class="text-center">Fitness Progress Tracker</h2>
-            <div class="row">
-                <div class="col-md-6 col-sm-12">
-                    <h3>Bench Press</h3>
-                    <div class="progress">
-                        <div id="bench-progress" class="progress-bar progress-bar-success" role="progressbar" style="width: 60%;">
-                            60kg / 100kg
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-12">
-                    <h3>Deadlift</h3>
-                    <div class="progress">
-                        <div id="deadlift-progress" class="progress-bar progress-bar-info" role="progressbar" style="width: 75%;">
-                            75kg / 150kg
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-12">
-                    <h3>Squat</h3>
-                    <div class="progress">
-                        <div id="squat-progress" class="progress-bar progress-bar-warning" role="progressbar" style="width: 50%;">
-                            60kg / 120kg
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <script>
-            // Example: You can update these dynamically
-            document.getElementById("bench-progress").style.width = "70%";
-            document.getElementById("bench-progress").innerText = "70kg / 100kg";
-        </script>
-        
     </section>
 
     <section id="contact" class="contact container-fluid">
         <h2 class="text-center">Contact Me</h2>
         <p>If you'd like to get in touch, feel free to reach out via email, phone, or connect with me on social media:</p>
-        <ul class="list-unstyled text-center"> 
-
+        <ul class="list-unstyled text-center">
             <li>Email: <a href="mailto:aryanrecover965@gmail.com">aryanrecover965@gmail.com</a></li>
             <li>Phone: <a href="tel:+918628862610">+91 8628862610</a></li>
             <li>Instagram: <a href="https://www.instagram.com/aryann_thakurr/" target="_blank">Follow me</a></li>
@@ -136,5 +131,11 @@
         </div>
     </footer>
 
+    <script>
+        window.onload = function() {
+            document.getElementById("bench-progress").style.width = "80%";
+            document.getElementById("bench-progress").innerText = "80kg / 100kg";
+        };
+    </script>
 </body>
 </html>

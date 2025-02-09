@@ -1,302 +1,136 @@
-/* General reset */
-* {
+/* General Styles */
+body {
+    background: #111;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
 }
 
-body {
-    background-color: #f1f1f1;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Container */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+h1, h2, h3 {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
 /* Header */
 .header {
-    background-color: #1f1f1f;
-    color: #fff;
-    padding: 30px 0;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    transition: background-color 0.3s ease;
-}
-
-.header:hover {
-    background-color: #444;
+    background: linear-gradient(90deg, #ff0000, #660000);
+    padding: 15px 0;
+    transition: all 0.3s ease-in-out;
 }
 
 .header .logo {
-    font-size: 2.8em;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.8);
+}
+
+.navbar-nav li a {
+    color: #fff !important;
     font-weight: 600;
-    letter-spacing: 2px;
-    color: #ff6347; /* Spicy color for a modern touch */
-    text-transform: uppercase;
-    transition: color 0.3s ease;
+    transition: 0.3s;
 }
 
-.header .logo:hover {
-    color: #fff;
+.navbar-nav li a:hover {
+    color: #00ffd5 !important;
+    text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.8);
 }
 
-.header .nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.header .nav ul li {
-    margin-left: 20px;
-}
-
-.header .nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1em;
-    text-transform: uppercase;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.header .nav ul li a:hover {
-    color: #ff6347;
-}
-
-/* Profile Section */
-.about .profile {
+/* About Section */
+.about {
+    padding: 60px 20px;
+    background: #282525;
     text-align: center;
-    margin-bottom: 50px;
-    animation: fadeIn 1s ease-out;
 }
 
 .profile-img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid #ff6347; /* A stylish border to highlight the image */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    border: 5px solid #ff0000;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
 }
 
-.profile-img:hover {
-    transform: scale(1.05); /* Image zoom effect */
-}
-
-.profession {
-    font-size: 1.3em;
-    color: #555;
-    margin-top: 10px;
-    letter-spacing: 1px;
-}
-
-/* About Text */
-.about h3 {
-    font-size: 1.8em;
-    color: #333;
-    margin-top: 20px;
-    font-weight: 600;
-    border-bottom: 2px solid #ff6347;
-    padding-bottom: 5px;
-    display: inline-block;
-    margin-bottom: 15px;
-}
-
-.about p {
-    font-size: 1.1em;
-    color: #666;
-    line-height: 1.7;
-    margin-bottom: 20px;
-}
-
-/* Portfolio Section */
-.portfolio {
-    padding: 50px 0;
-    background-color: #fff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.portfolio h2 {
-    font-size: 2.5em;
+/* Achievements Section */
+.achievements {
+    background: #1a1a1a;
+    padding: 50px;
     text-align: center;
-    color: #333;
-    margin-bottom: 30px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+.achievements ul {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.achievements li {
+    padding: 10px 0;
+    color: #ff0000;
+}
+
+/* Portfolio */
+.portfolio {
+    background: #111;
+    padding: 50px;
+    text-align: center;
 }
 
 .portfolio-item {
-    background-color: #f9f9f9;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.portfolio-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
 }
 
 .portfolio-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
     border-radius: 10px;
-    transition: transform 0.3s ease;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+    transition: 0.3s;
 }
 
 .portfolio-item img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
-.portfolio-item h3 {
-    font-size: 1.4em;
-    margin-top: 20px;
-    color: #333;
-    font-weight: 500;
+/* Progress Bars */
+.progress-bar {
+    text-align: center;
+    font-weight: bold;
+    animation: progressAnimation 2s ease-in-out;
 }
 
-.portfolio-item p {
-    color: #777;
-    font-size: 1em;
+@keyframes progressAnimation {
+    from { width: 0; }
+    to { width: inherit; }
 }
+
+.progress-bar-success { background: #ff0000; }
+.progress-bar-info { background: #ff6600; }
+.progress-bar-warning { background: #ffcc00; }
 
 /* Contact Section */
 .contact {
-    padding: 50px 0;
-    background-color: #f9f9f9;
+    background: #222;
+    padding: 50px;
     text-align: center;
 }
 
-.contact h2 {
-    font-size: 2.5em;
-    color: #333;
-    margin-bottom: 30px;
-    font-weight: 600;
-    text-transform: uppercase;
+.contact a {
+    color: #2794cf;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.contact ul {
-    list-style: none;
-    padding: 0;
-    font-size: 1.2em;
-    color: #555;
-}
-
-.contact ul li {
-    margin-bottom: 15px;
-}
-
-.contact ul li a {
-    color: #ff6347;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.contact ul li a:hover {
-    color: #333;
+.contact a:hover {
+    text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.8);
 }
 
 /* Footer */
 .footer {
-    background-color: #1f1f1f;
-    color: white;
-    padding: 20px 0;
+    background: #1a1a1a;
+    padding: 20px;
     text-align: center;
-    margin-top: 50px;
-    font-size: 1em;
-}
-
-.footer p {
-    font-weight: 500;
-}
-
-.footer a {
-    color: #ff6347;
-    text-decoration: none;
-}
-
-.footer a:hover {
-    color: #fff;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-/* Media Queries for Responsiveness */
-
-/* Small devices (phones, 600px and below) */
-@media screen and (max-width: 600px) {
-    .header .logo {
-        font-size: 2em;
-    }
-
-    .header .nav ul {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .header .nav ul li {
-        margin-left: 0;
-        margin-top: 10px;
-    }
-
-    .portfolio-grid {
-        grid-template-columns: 1fr; /* Stack items vertically */
-    }
-
-    .profile-img {
-        width: 150px;
-        height: 150px;
-    }
-
-    .portfolio-item img {
-        height: 150px;
-    }
-
-    .contact ul li {
-        font-size: 1em;
-    }
-}
-
-/* Medium devices (tablets, 601px to 1024px) */
-@media screen and (max-width: 1024px) {
-    .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr); /* Two items per row */
-    }
-
-    .profile-img {
-        width: 180px;
-        height: 180px;
-    }
-
-    .portfolio-item img {
-        height: 180px;
-    }
+    font-weight: bold;
+    color: #ff0000;
 }
