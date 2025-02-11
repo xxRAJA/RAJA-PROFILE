@@ -16,7 +16,7 @@ h1, h2, h3 {
 /* Header */
 .header {
     background: linear-gradient(90deg, #ff0000, #660000);
-    padding: 15px 0;
+    padding: 5px 0;
     transition: all 0.3s ease-in-out;
 }
 
@@ -29,8 +29,10 @@ h1, h2, h3 {
 
 .navbar-nav li a {
     color: #fff !important;
+    font-size:18px;
     font-weight: 600;
     transition: 0.3s;
+    margin-top: 12px;
 }
 
 .navbar-nav li a:hover {
@@ -85,6 +87,7 @@ h1, h2, h3 {
 
 .portfolio-item img {
     border-radius: 10px;
+    margin: auto;
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
     transition: 0.3s;
 }
@@ -134,3 +137,18 @@ h1, h2, h3 {
     font-weight: bold;
     color: #ff0000;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: black;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 0, 0, 0.8);
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
+  }
