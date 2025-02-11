@@ -1,7 +1,7 @@
 /* General Styles */
 body {
-    background: #111;
-    color: #fff;
+    background: #a10909;
+    color: #499cbc;
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
@@ -15,20 +15,20 @@ h1, h2, h3 {
 
 /* Header */
 .header {
-    background: linear-gradient(90deg, #ff0000, #660000);
+    background: linear-gradient(90deg, #fbf9f9, #000000);
     padding: 5px 0;
     transition: all 0.3s ease-in-out;
 }
 
 .header .logo {
-    color: #fff;
+    color: #0d19f1;
     font-size: 24px;
     font-weight: bold;
-    text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.8);
+    text-shadow: 2px 2px 10px rgba(134, 204, 13, 0.8);
 }
 
 .navbar-nav li a {
-    color: #fff !important;
+    color: #131313 !important;
     font-size:18px;
     font-weight: 600;
     transition: 0.3s;
@@ -36,14 +36,14 @@ h1, h2, h3 {
 }
 
 .navbar-nav li a:hover {
-    color: #00ffd5 !important;
-    text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.8);
+    color: #199fc4 !important;
+    text-shadow: 2px 2px 10px rgba(32, 126, 173, 0.8);
 }
 
 /* About Section */
 .about {
     padding: 60px 20px;
-    background: #282525;
+    background: #1b1818;
     text-align: center;
 }
 
