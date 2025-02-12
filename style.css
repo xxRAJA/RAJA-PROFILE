@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    background: #a10909;
+    background: #131212;
     color: #499cbc;
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -15,7 +15,7 @@ h1, h2, h3 {
 
 /* Header */
 .header {
-    background: linear-gradient(90deg, #fbf9f9, #000000);
+    background: linear-gradient(90deg, #913535, #1e818e);
     padding: 5px 0;
     transition: all 0.3s ease-in-out;
 }
@@ -24,11 +24,11 @@ h1, h2, h3 {
     color: #0d19f1;
     font-size: 24px;
     font-weight: bold;
-    text-shadow: 2px 2px 10px rgba(134, 204, 13, 0.8);
+    text-shadow: 2px 2px 10px rgba(15, 97, 155, 0.8);
 }
 
 .navbar-nav li a {
-    color: #5babc8 !important;
+    color: #060606 !important;
     font-size:18px;
     font-weight: 600;
     transition: 0.3s;
@@ -43,7 +43,7 @@ h1, h2, h3 {
 /* About Section */
 .about {
     padding: 60px 20px;
-    background: #1b1818;
+    background: #180c0c;
     text-align: center;
 }
 
@@ -51,8 +51,8 @@ h1, h2, h3 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    border: 5px solid #ff0000;
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+    border: 5px solid #00ff84;
+    box-shadow: 0 0 15px rgba(0, 149, 255, 0.8);
 }
 
 /* Achievements Section */
@@ -71,7 +71,7 @@ h1, h2, h3 {
 
 .achievements li {
     padding: 10px 0;
-    color: #ff0000;
+    color: #1f8b99;
 }
 
 /* Portfolio */
@@ -120,35 +120,36 @@ h1, h2, h3 {
 }
 
 .contact a {
-    color: #2794cf;
+    color: #27cfab;
     font-weight: bold;
     transition: 0.3s;
 }
 
 .contact a:hover {
-    text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.8);
+    text-shadow: 2px 2px 10px rgb(255, 0, 0);
 }
 
 /* Footer */
 .footer {
-    background: #1a1a1a;
-    padding: 20px;
+    background: #060606;
+    padding: 0px;
     text-align: center;
     font-weight: bold;
-    color: #ff0000;
+    color: #00a6ff;
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 4px;
   }
   
   ::-webkit-scrollbar-track {
-    background: black;
+    background: rgb(3, 1, 1);
     border-radius: 10px;
   }
   
   ::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 0, 0, 0.8);
-    border-radius: 10px;
+    background-color: rgba(247, 241, 241, 0.8);
+    border-radius: 90px;
     transition: background 0.3s ease-in-out;
   }
+  
