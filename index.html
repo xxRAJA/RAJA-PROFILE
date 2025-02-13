@@ -13,6 +13,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head>
 
 <body>
@@ -28,10 +30,10 @@
             </div>
             <nav class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#store">Store</a></li>
+                    <li><a href="#about">About<span></span></a></li>
+                    <li><a href="#portfolio">Portfolio<span></span></a></li>
+                    <li><a href="#contact">Contact<span></span></a></li>
+                    <li><a href="#store">Store<span></span></a></li>
                 </ul>
             </nav>
         </div>
@@ -41,8 +43,13 @@
         <div class="row">
             <div class="col-sm-6 col-xs-12 text-center">
                 <img src="image/IMG_20240401_195517_674.jpg" alt="ARYAN THAKUR" class="profile-img img-responsive center-block">
-                <h2>ARYAN THAKUR</h2>
-                <p class="profession">Fitness Enthusiast | Gym Member | Personal Growth Advocate</p>
+                <div class="intro">
+                    Hi, this is <span id="purple">Aryan Thakur</span>
+                <div>I am a passionate 
+                    <div><span id="element"></span></div>
+                </div>
+                </div>
+                <!-- <p class="profession">Fitness Enthusiast | Gym Member | Personal Growth Advocate</p> -->
             </div>
             <div class="col-sm-6 col-xs-12">
                 <h3>About Me</h3>
@@ -150,6 +157,10 @@
             document.getElementById("bench-progress").style.width = "80%";
             document.getElementById("bench-progress").innerText = "80kg / 100kg";
         };
+        var typed = new Typed('#element', {
+          strings: ['Fitness Enthusiast','Gym Member','Personal Growth Advocate'],
+          typeSpeed: 50,
+        });
     </script>
 </body>
 </html>
