@@ -1,10 +1,11 @@
 /* General Styles */
 body {
-    background: #a10909;
-    color: #499cbc;
+    background: linear-gradient(to right, #a10909, #ff4d4d);
+    color: #ffffff;
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    transition: background 0.3s ease-in-out;
 }
 
 h1, h2, h3 {
@@ -16,28 +17,30 @@ h1, h2, h3 {
 /* Header */
 .header {
     background: linear-gradient(90deg, #fbf9f9, #000000);
-    padding: 5px 0;
+    padding: 10px 0;
     transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .header .logo {
     color: #0d19f1;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: bold;
     text-shadow: 2px 2px 10px rgba(134, 204, 13, 0.8);
+    animation: fadeIn 1s ease-in-out;
 }
 
 .navbar-nav li a {
-    color: #5babc8 !important;
-    font-size:18px;
+    color: #ffffff !important;
+    font-size: 18px;
     font-weight: 600;
     transition: 0.3s;
     margin-top: 12px;
 }
 
 .navbar-nav li a:hover {
-    color: #199fc4 !important;
-    text-shadow: 2px 2px 10px rgba(32, 126, 173, 0.8);
+    color: #ffcc00 !important;
+    text-shadow: 2px 2px 10px rgba(255, 204, 0, 0.8);
 }
 
 /* About Section */
@@ -45,14 +48,21 @@ h1, h2, h3 {
     padding: 60px 20px;
     background: #1b1818;
     text-align: center;
+    color: #ffffff;
+    animation: fadeInUp 1s ease-in-out;
 }
 
 .profile-img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    border: 5px solid #ff0000;
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+    border: 5px solid #ffcc00;
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.8);
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
 }
 
 /* Achievements Section */
@@ -60,6 +70,7 @@ h1, h2, h3 {
     background: #1a1a1a;
     padding: 50px;
     text-align: center;
+    color: #ffffff;
 }
 
 .achievements ul {
@@ -71,7 +82,12 @@ h1, h2, h3 {
 
 .achievements li {
     padding: 10px 0;
-    color: #ff0000;
+    color: #ffcc00;
+    transition: color 0.3s ease-in-out;
+}
+
+.achievements li:hover {
+    color: #ff6600;
 }
 
 /* Portfolio */
@@ -83,13 +99,14 @@ h1, h2, h3 {
 
 .portfolio-item {
     margin-bottom: 30px;
+    animation: fadeInUp 1s ease-in-out;
 }
 
 .portfolio-item img {
     border-radius: 10px;
     margin: auto;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
-    transition: 0.3s;
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.7);
+    transition: transform 0.3s ease-in-out;
 }
 
 .portfolio-item img:hover {
@@ -108,25 +125,26 @@ h1, h2, h3 {
     to { width: inherit; }
 }
 
-.progress-bar-success { background: #ff0000; }
+.progress-bar-success { background: #ffcc00; }
 .progress-bar-info { background: #ff6600; }
-.progress-bar-warning { background: #ffcc00; }
+.progress-bar-warning { background: #ff3300; }
 
 /* Contact Section */
 .contact {
     background: #222;
     padding: 50px;
     text-align: center;
+    color: #ffffff;
 }
 
 .contact a {
-    color: #2794cf;
+    color: #ffcc00;
     font-weight: bold;
     transition: 0.3s;
 }
 
 .contact a:hover {
-    text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.8);
+    text-shadow: 2px 2px 10px rgba(255, 204, 0, 0.8);
 }
 
 /* Footer */
@@ -135,20 +153,32 @@ h1, h2, h3 {
     padding: 20px;
     text-align: center;
     font-weight: bold;
-    color: #ff0000;
+    color: #ffcc00;
 }
 
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
-  }
-  
-  ::-webkit-scrollbar-track {
+}
+
+::-webkit-scrollbar-track {
     background: black;
     border-radius: 10px;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 0, 0, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 204, 0, 0.8);
     border-radius: 10px;
     transition: background 0.3s ease-in-out;
-  }
+}
