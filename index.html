@@ -18,6 +18,9 @@
 </head>
 
 <body>
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn">⬆</button>
+
     <header class="header navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -160,6 +163,20 @@
         var typed = new Typed('#element', {
           strings: ['Fitness Enthusiast','Gym Member','Personal Growth Advocate'],
           typeSpeed: 50,
+        });
+        // Scroll to Top button functionality
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        window.onscroll = function () {
+            if (document.documentElement.scrollTop > 100) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        scrollToTopBtn.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
         });
     </script>
 </body>
