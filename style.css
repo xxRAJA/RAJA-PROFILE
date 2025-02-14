@@ -146,6 +146,15 @@ nav a:hover span{
 .progress-bar-info { background: #ff6600; }
 .progress-bar-warning { background: #ffcc00; }
 
+
+ /* hero */
+
+
+.hero video{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
 /* Contact Section */
 .contact {
     background: #222;
