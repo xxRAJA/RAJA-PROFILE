@@ -26,9 +26,6 @@ h1, h2, h3 {
     font-weight: bold;
     text-shadow: 2px 2px 10px rgba(15, 97, 155, 0.8);
 }
-.navbar-brand{
-    color: rgb(208, 64, 208);
-}
 .navbar-nav li a {
     color: #060606 !important;
     font-size:18px;
@@ -83,7 +80,13 @@ nav a:hover span{
     margin-top: 2rem;
     margin-left: 15rem;
     font-size: 3rem;
+}
 
+@media screen and (max-width: 728px){
+    .intro{
+        width: 100%;
+        margin: 1rem 0;
+    }
 }
 #purple{
     font-size: 3.2rem;
