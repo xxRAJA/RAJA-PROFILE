@@ -94,12 +94,7 @@ nav a:hover span{
     margin-left: 15rem;
     font-size: 3rem;
 }
-@media screen and (max-width:728px) {
-    .intro{
-        width: 100%;
-        margin: 1rem 0;
-    }
-}
+/* Aryan Thakur  */
 #purple{
     font-size: 4rem;
     font-weight: bold;
@@ -107,6 +102,13 @@ nav a:hover span{
     -webkit-background-clip: text;
     -webkit-text-stroke: 2px black;
     -webkit-text-fill-color: transparent;
+}
+/* Mobile responsive */
+@media screen and (max-width:728px) {
+    .intro{
+        width: 100%;
+        margin: 1rem 0;
+    }
 }
 /* Achievements Section */
 .achievements {
