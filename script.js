@@ -65,3 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+let audio = document.getElementById('heroaudio')
+document.addEventListener('click',()=>{
+    audio.play();
+})

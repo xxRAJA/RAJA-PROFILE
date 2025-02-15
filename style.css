@@ -60,11 +60,21 @@ nav a:hover span{
 
 /* About Section */
 .about {
+    position: relative;
+    overflow: hidden;
     padding: 60px 20px;
-    background: #180c0c;
+    /* background: #180c0c; */
     text-align: center;
 }
-
+.bgvideo{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
 .profile-img {
     margin-top: 1rem;
     width: 250px;
@@ -83,11 +93,20 @@ nav a:hover span{
     margin-top: 2rem;
     margin-left: 15rem;
     font-size: 3rem;
-
+}
+@media screen and (max-width:728px) {
+    .intro{
+        width: 100%;
+        margin: 1rem 0;
+    }
 }
 #purple{
-    font-size: 3.2rem;
-    color: rgb(188, 50, 231);
+    font-size: 4rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #4CB8C4,#3CD3AD);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 2px black;
+    -webkit-text-fill-color: transparent;
 }
 /* Achievements Section */
 .achievements {
