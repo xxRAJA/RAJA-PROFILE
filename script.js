@@ -1,7 +1,6 @@
 // scripts.js
 
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("DOM fully loaded!");
     let welcomeMessage = document.createElement("div");
     welcomeMessage.id = "welcome-message";
     welcomeMessage.style.position = "fixed";
