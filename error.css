@@ -1,0 +1,35 @@
+body {
+    text-align: center;
+    background: #131212;
+    color: #e9eef0;
+    font-family: 'Poppins', sans-serif;
+}
+.error-container {
+    margin-top: 10%;
+}
+.error-title {
+    font-size: 6rem;
+    font-weight: bold;
+    color: #ff0000;
+    text-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+}
+.error-message {
+    font-size: 2rem;
+    margin: 10rem 0px;
+}
+.btn-home {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(90deg, #913535, #1e818e);
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 0 20px rgba(0, 149, 255, 0.8);
+    transition: 0.3s;
+}
+.btn-home:hover {
+    box-shadow: 0 0 40px rgba(0, 149, 255, 1);
+    transform: scale(1.05);
+}
