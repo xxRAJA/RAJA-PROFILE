@@ -1,36 +1,6 @@
 // scripts.js
 
 document.addEventListener("DOMContentLoaded", () => {
-    let welcomeMessage = document.createElement("div");
-    welcomeMessage.id = "welcome-message";
-    welcomeMessage.style.position = "fixed";
-    welcomeMessage.style.fontSize = "50px";
-    welcomeMessage.style.top = "50%";
-    welcomeMessage.style.left = "50%";
-    welcomeMessage.style.transform = "translateX(-50%)";
-    welcomeMessage.style.background = "linear-gradient(90deg, #913535, #1e818e)";
-    welcomeMessage.style.color = "white";
-    welcomeMessage.style.padding = "10px 20px";
-    welcomeMessage.style.borderRadius = "10px";
-    welcomeMessage.style.boxShadow = "0px 4px 10px rgba(0, 0, 0, 0.3)";
-    welcomeMessage.style.zIndex = "1000";
-    welcomeMessage.style.transition = "opacity 1s ease-in-out";
-
-    if (localStorage.getItem("visitedBefore")) {
-        welcomeMessage.innerText = "Welcome back, buddy!";
-    } else {
-        welcomeMessage.innerText = "Welcome to my site!";
-        localStorage.setItem("visitedBefore", "true");
-    }
-
-    document.body.appendChild(welcomeMessage);
-
-    // Hide the message after 3 seconds
-    setTimeout(() => {
-        welcomeMessage.style.opacity = "0";
-        setTimeout(() => welcomeMessage.remove(), 1000);
-    }, 1000);
-
     // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll(".nav a");
 
