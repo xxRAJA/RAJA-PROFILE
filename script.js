@@ -69,3 +69,16 @@ let audio = document.getElementById('heroaudio')
 document.addEventListener('click',()=>{
     audio.play();
 })
+ type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Aryan Thakur",
+  "jobTitle": "Fitness Trainer & Personal Growth Advocate",
+  "url": "https://raja-profile.vercel.app/",
+  "sameAs": [
+    "https://www.instagram.com/aryanthakur",
+    "https://www.linkedin.com/in/aryanthakur"
+  ]
+}
+
