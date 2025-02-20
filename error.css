@@ -1,0 +1,81 @@
+body {
+    text-align: center;
+    background: #131212;
+    color: #e9eef0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.error-container {
+    margin-top: 5%;
+}
+
+.error-title {
+    font-size: 6rem;
+    font-weight: bold;
+    color: #ff0000;
+    text-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+}
+
+.error-message {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+}
+
+.error-gif {
+    width: 200px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+}
+
+.workout-challenge {
+    font-size: 1.5rem;
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+.countdown {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.search-bar {
+    width: 60%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    margin: 10px 0;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.nav-links {
+    margin-top: 20px;
+}
+
+.btn-home, .btn-secondary {
+    padding: 12px 25px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-home {
+    background: linear-gradient(90deg, #ff4d4d, #1e818e);
+    box-shadow: 0 0 20px rgba(0, 149, 255, 0.8);
+}
+
+.btn-secondary {
+    background: linear-gradient(90deg, #444, #222);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.btn-home:hover, .btn-secondary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+}
