@@ -235,3 +235,59 @@ nav a:hover span{
     box-shadow: 0 0 20px rgba(0, 123, 255, 1), 0 0 30px rgba(0, 123, 255, 0.8);
     transform: scale(1.1);
 }
+.checkbox {
+    opacity: 0;
+    position: absolute;
+  }
+.checkbox-label {
+    background-color: #111;
+    width: 70px;
+    height: 26px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .fa-moon {color: #f1c40f;font-size:x-large;}
+  
+  .fa-sun {color: #f39c12;font-size: x-large;}
+  body.dark {background-color: #292c35;} /* #9b59b6 */
+
+  body.light h1, body.light {color: #fff;}
+  .checkbox-label .ball {
+    background-color: #fff;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    left: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+  }
+  .checkbox:checked + .checkbox-label .ball {
+    transform: translateX(40px);
+  }
+  header.light{
+    background: linear-gradient(#a7a3ee ,#d3d3f2,#97e2f1);
+    /* background-color: #fff; */
+    transition: all 0.3s ease-in-out;
+}
+  .achievements.light{
+    background-color: #ffffff;
+    color: #000000;
+  }
+  .portfolio.light{
+    background-color: #ffffff;
+    color: #000000;
+  }
+  .contact.light{
+    background:linear-gradient(#a7a3ee ,#d3d3f2,#97e2f1);
+    color: #000000;
+  }
+  .contact.light a{
+    color: #0d3c01;
+  }
+    
