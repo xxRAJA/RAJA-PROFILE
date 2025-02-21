@@ -13,6 +13,23 @@ h1, h2, h3 {
     letter-spacing: 2px;
 }
 
+#welcome-message-div{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index:100;
+}
+
+#welcome-message{
+    background: linear-gradient(90deg, #913535, #1e818e);
+    padding: 2rem;
+    border-radius: 20px;
+    font-size: 30px;
+}
+
 /* Header */
 .header {
     background: linear-gradient(90deg, #913535, #1e818e);
