@@ -69,6 +69,15 @@ let audio = document.getElementById('heroaudio')
 document.addEventListener('click',()=>{
     audio.play();
 })
+
+const checkbox = document.getElementById('checkbox');
+checkbox.addEventListener('change',()=>{
+    document.body.classList.toggle('light');
+    document.querySelector('header').classList.toggle('light');
+    document.querySelector('.achievements').classList.toggle('light');
+    document.querySelector('.portfolio').classList.toggle('light');
+    document.querySelector('.contact').classList.toggle('light');
+})
  type="application/ld+json">
 {
   "@context": "https://schema.org",
