@@ -1,6 +1,18 @@
 // scripts.js
 
 document.addEventListener("DOMContentLoaded", () => {
+    const welcomeMessage = document.getElementById("welcome-message");
+            
+    if (localStorage.getItem("hasVisited")==='true') {
+        welcomeMessage.textContent = "Welcome back!";
+    } else {
+        localStorage.setItem("hasVisited", true);
+        welcomeMessage.textContent = "Welcome! This is your first visit.";
+    }
+    
+    setTimeout(() => {
+        welcomeMessage.style.display = "none";
+    }, 5000);
     // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll(".nav a");
 
