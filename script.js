@@ -78,3 +78,16 @@ checkbox.addEventListener('change',()=>{
     document.querySelector('.portfolio').classList.toggle('light');
     document.querySelector('.contact').classList.toggle('light');
 })
+ type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Aryan Thakur",
+  "jobTitle": "Fitness Trainer & Personal Growth Advocate",
+  "url": "https://raja-profile.vercel.app/",
+  "sameAs": [
+    "https://www.instagram.com/aryanthakur",
+    "https://www.linkedin.com/in/aryanthakur"
+  ]
+}
+
