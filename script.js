@@ -103,3 +103,10 @@ checkbox.addEventListener('change',()=>{
   ]
 }
 
+document.querySelectorAll('.navbar-nav a').forEach(link => {
+    link.addEventListener('click', function(event) {
+        if (this.href.startsWith('http')) {
+            window.location.href = this.href;
+        }
+    });
+});
