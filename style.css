@@ -188,30 +188,176 @@ nav a:hover span{
 .progress-bar-info { background: #ff6600; }
 .progress-bar-warning { background: #ffcc00; }
 
-/* Contact Section */
-.contact {
-    background: #222;
-    padding: 50px;
-    text-align: center;
+/* Footer section with contact me section */
+
+footer {
+    width: 100%;
+    height: auto;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background: linear-gradient(135deg, #004953, #026773);
+    color: #fff;
+    position: relative;
+    /* For positioning child elements */
 }
 
-.contact a {
-    color: #27cfab;
+/* Footer Container */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    /* Allows absolute positioning within */
+}
+
+/* Heading Styles */
+footer h3 {
+    font-size: 2.9rem;
+    margin-bottom: 20px;
+    color: #ffcc70;
+}
+
+/* Contact Message */
+.contact-message {
+    font-size: 2.1rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* Contact Info Section */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Contact Links */
+.contact-info a {
+    color: #ffcc70;
+    font-size: 1.9rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+/* Textarea Styling */
+footer textarea {
+    max-width: 500px;
+    padding: 15px;
+    border-radius: 12px;
+    color: #000000;
+    outline: none;
+    border: none;
+    resize: none;
+    font-size: 1.5rem;
     font-weight: bold;
-    transition: 0.3s;
+    transition: box-shadow 0.3s ease;
 }
 
-.contact a:hover {
-    text-shadow: 2px 2px 10px rgb(255, 0, 0);
+/* Textarea Placeholder */
+footer textarea::placeholder {
+    color: #5c5c5c;
 }
 
-/* Footer */
-.footer {
-    background: #060606;
-    padding: 0px;
-    text-align: center;
+/* Focus Effect */
+footer textarea:focus {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Social Media Section */
+.social-media {
+    position: absolute;
+    top: 250px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Social Media Icons */
+.social-media a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Social Media Images */
+.social-media img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+/* Icon Hover Effect */
+.social-media a:hover {
+    transform: translateY(-5px);
+    opacity: 0.9;
+}
+
+.social-media img:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Horizontal Divider */
+hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 40px 0;
+}
+
+/* Footer Message */
+.footer-message {
+    font-size: 1.2rem;
+    color: #c5c5c5;
     font-weight: bold;
-    color: #00a6ff;
+    text-align: center;
+    line-height: 50px;
+    text-shadow: 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #1e1e1e, 0 4px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    footer {
+        padding: 40px 15px;
+        /* Adjust padding for smaller screens */
+    }
+
+    footer h3 {
+        font-size: 1.5rem;
+        /* Adjust heading size */
+    }
+
+    .contact-message {
+        font-size: 1.5rem;
+    }
+
+    .social-media{
+        position: static;
+        /* Reset position on smaller screens */
+        justify-content: center;
+        /* Center icons */
+        margin-top: 20px;
+        /* Add margin */
+    }
+
+    .social-media img {
+        width: 40px;
+        /* Smaller icons for mobile */
+        height: 40px;
+    }
+
+    footer textarea {
+        width: 100%;
+        /* Full width on smaller screens */
+    }
 }
 
 ::-webkit-scrollbar {
