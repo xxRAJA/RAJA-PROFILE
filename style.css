@@ -189,26 +189,85 @@ nav a:hover span{
 .progress-bar-warning { background: #ffcc00; }
 
 /* Contact Section */
-.contact {
-    background: #222;
-    padding: 50px;
+.contact-section {
+    background: linear-gradient(135deg, #222, #333);
+    padding: 60px 20px;
     text-align: center;
+    color: #e9eef0;
 }
 
-.contact a {
-    color: #27cfab;
+.contact-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Grid Layout: Single Line */
+.contact-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 19px;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    background: #1c1c1c;
+    padding: 20px;
+    border-radius: 15px;
+    width: 220px;  /* Set a fixed width to align items in a row */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+}
+
+.contact-item i {
+    font-size: 3rem;
+    color: #ff7043;
+    margin-bottom: 10px;
+}
+
+.contact-item h3 {
+    font-size: 1rem;
+    color: #f2f2f2;
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    font-size: 13px;
+    color: #b0b0b0;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: #ff5722;
     font-weight: bold;
-    transition: 0.3s;
 }
 
-.contact a:hover {
-    text-shadow: 2px 2px 10px rgb(255, 0, 0);
+.contact-item a:hover {
+    color: #e64a19;
 }
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .contact-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .contact-item {
+        width: 100%;  /* Stacks cards in mobile view */
+    }
+}
+
 
 /* Footer */
 .footer {
     background: #060606;
-    padding: 0px;
+    padding: 14px;
     text-align: center;
     font-weight: bold;
     color: #00a6ff;
