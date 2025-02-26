@@ -269,6 +269,35 @@ footer textarea:focus {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Submit Button Styling */
+footer .submit-button {
+    background: linear-gradient(135deg, #ffcc70, #ff8a00);
+    color: #000000;
+    padding: 12px 24px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    outline: none;
+    max-width: 200px;
+    align-self: flex-start;
+}
+
+/* Hover Effect */
+footer .submit-button:hover {
+    background: linear-gradient(135deg, #ffd700, #ff6347);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+/* Active Effect */
+footer .submit-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 /* Social Media Section */
 .social-media {
     position: absolute;
