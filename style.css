@@ -648,3 +648,42 @@ hr {
 #chatbot-btn:hover {
     transform: scale(1.1);
 }
+.portfolio-item {
+    background: linear-gradient(135deg, #1e1e1e, #333); /* Dark gradient background */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow effect */
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.portfolio-item img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Subtle glow effect */
+}
+
+.portfolio-item h3 {
+    color: #f8b400; /* Gold color for a premium look */
+    font-size: 22px;
+    margin-top: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.portfolio-item p {
+    color: #ddd;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 300;
+    margin: 10px 0;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Light transparent background */
+    border-radius: 8px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
