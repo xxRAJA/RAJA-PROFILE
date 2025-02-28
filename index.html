@@ -47,6 +47,7 @@
             </div>
             <nav class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#Home" onclick="Home()">Home<span></span></a></li>
                     <li><a href="#about">About<span></span></a></li>
                     <li><a href="#portfolio">Portfolio<span></span></a></li>
                     <li><a href="#contact">Contact<span></span></a></li>
@@ -170,6 +171,15 @@
         </div>
     </section>
 
+    <section id="Quiz">
+        <!--Btn for Fitness Quiz-->
+        <div class="quiz-btn">
+            <h1 class="Quiz-head">Fitness Quiz</h1>
+            <p class="Quiz-para">Take this quiz to test your fitness knowledge.</p>
+            <button class="Quiz-btn" onclick="goToQuiz()">Click Here !!</button>
+        </div>
+    </section>
+
 
     <!-- Footer section starts from here with contact me section -->
     <footer>
@@ -228,6 +238,15 @@
         scrollToTopBtn.addEventListener("click", function () {
             window.scrollTo({ top: 0, behavior: "smooth" });
         });
+
+        function goToQuiz() {
+            window.location.href = "quiz.html";
+        }
+
+        function Home() {
+            window.location.href = "index.html";
+        }
+
     </script>
 </body>
 </html>
