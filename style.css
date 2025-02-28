@@ -13,6 +13,23 @@ h1, h2, h3 {
     letter-spacing: 2px;
 }
 
+#welcome-message-div{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index:100;
+}
+
+#welcome-message{
+    background: linear-gradient(90deg, #913535, #1e818e);
+    padding: 2rem;
+    border-radius: 20px;
+    font-size: 30px;
+}
+
 /* Header */
 .header {
     background: linear-gradient(90deg, #913535, #1e818e);
@@ -35,6 +52,10 @@ h1, h2, h3 {
     font-weight: 600;
     transition: 0.3s;
     margin-top: 12px;
+
+        margin-right: 15px; /* Adjust as needed */
+    
+    
 }
 nav a span{
     position: absolute;
@@ -167,30 +188,205 @@ nav a:hover span{
 .progress-bar-info { background: #ff6600; }
 .progress-bar-warning { background: #ffcc00; }
 
-/* Contact Section */
-.contact {
-    background: #222;
-    padding: 50px;
-    text-align: center;
+/* Footer section with contact me section */
+
+footer {
+    width: 100%;
+    height: auto;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background: linear-gradient(135deg, #004953, #026773);
+    color: #fff;
+    position: relative;
+    /* For positioning child elements */
 }
 
-.contact a {
-    color: #27cfab;
+/* Footer Container */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    /* Allows absolute positioning within */
+}
+
+/* Heading Styles */
+footer h3 {
+    font-size: 2.9rem;
+    margin-bottom: 20px;
+    color: #ffcc70;
+}
+
+/* Contact Message */
+.contact-message {
+    font-size: 2.1rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* Contact Info Section */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Contact Links */
+.contact-info a {
+    color: #ffcc70;
+    font-size: 1.9rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+/* Textarea Styling */
+footer textarea {
+    max-width: 500px;
+    padding: 15px;
+    border-radius: 12px;
+    color: #000000;
+    outline: none;
+    border: none;
+    resize: none;
+    font-size: 1.5rem;
     font-weight: bold;
-    transition: 0.3s;
+    transition: box-shadow 0.3s ease;
 }
 
-.contact a:hover {
-    text-shadow: 2px 2px 10px rgb(255, 0, 0);
+/* Textarea Placeholder */
+footer textarea::placeholder {
+    color: #5c5c5c;
 }
 
-/* Footer */
-.footer {
-    background: #060606;
-    padding: 0px;
-    text-align: center;
+/* Focus Effect */
+footer textarea:focus {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Submit Button Styling */
+footer .submit-button {
+    background: linear-gradient(135deg, #ffcc70, #ff8a00);
+    color: #000000;
+    padding: 12px 24px;
+    font-size: 1.8rem;
     font-weight: bold;
-    color: #00a6ff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    outline: none;
+    max-width: 200px;
+    align-self: flex-start;
+}
+
+/* Hover Effect */
+footer .submit-button:hover {
+    background: linear-gradient(135deg, #ffd700, #ff6347);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+/* Active Effect */
+footer .submit-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Social Media Section */
+.social-media {
+    position: absolute;
+    top: 250px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Social Media Icons */
+.social-media a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Social Media Images */
+.social-media img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+/* Icon Hover Effect */
+.social-media a:hover {
+    transform: translateY(-5px);
+    opacity: 0.9;
+}
+
+.social-media img:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Horizontal Divider */
+hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 40px 0;
+}
+
+/* Footer Message */
+.footer-message {
+    font-size: 1.2rem;
+    color: #c5c5c5;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+    text-shadow: 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #1e1e1e, 0 4px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    footer {
+        padding: 40px 15px;
+        /* Adjust padding for smaller screens */
+    }
+
+    footer h3 {
+        font-size: 1.5rem;
+        /* Adjust heading size */
+    }
+
+    .contact-message {
+        font-size: 1.5rem;
+    }
+
+    .social-media{
+        position: static;
+        /* Reset position on smaller screens */
+        justify-content: center;
+        /* Center icons */
+        margin-top: 20px;
+        /* Add margin */
+    }
+
+    .social-media img {
+        width: 40px;
+        /* Smaller icons for mobile */
+        height: 40px;
+    }
+
+    footer textarea {
+        width: 100%;
+        /* Full width on smaller screens */
+    }
 }
 
 ::-webkit-scrollbar {
@@ -214,7 +410,7 @@ nav a:hover span{
 /* Scroll to Top Button Styles */
 #scrollToTopBtn {
     position: fixed;
-    bottom: 40px;
+    bottom: 20px; /* Keep it at the bottom */
     right: 20px;
     display: none;
     padding: 10px 20px;
@@ -228,9 +424,8 @@ nav a:hover span{
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 123, 255, 0.8), 0 0 20px rgba(0, 123, 255, 0.6);
     transition: box-shadow 0.3s ease, transform 0.2s ease;
-    z-index: 1000;
+    z-index: 1000; /* Lower than chatbot */
 }
-
 #scrollToTopBtn:hover {
     box-shadow: 0 0 20px rgba(0, 123, 255, 1), 0 0 30px rgba(0, 123, 255, 0.8);
     transform: scale(1.1);
@@ -291,3 +486,108 @@ nav a:hover span{
     color: #0d3c01;
   }
     
+/* Chatbot Container */
+#chatbot-container {
+    display: none;
+    position: fixed;
+    bottom: 135px; /* Increased to ensure it's above the scroll-up button */
+    right: 20px;
+    width: 350px;
+    max-height: 500px;
+    background: #121212;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.4);
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    z-index: 1100; /* Higher than scroll button */
+}
+
+/* Chat Header */
+#chatbot-header {
+    background: #1E1E1E;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: move;
+}
+
+/* Close Button */
+#close-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: rgb(65, 17, 17);
+}
+
+/* Chat Messages Area */
+#chatbot-messages {
+    height: 350px;
+    overflow-y: auto;
+    padding: 10px;
+    background: #181818;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 255, 255, 0.5) transparent;
+}
+
+#chatbot-messages div {
+    margin: 8px 0;
+    padding: 8px;
+    border-radius: 8px;
+    background: rgba(0, 255, 255, 0.1);
+}
+
+/* User Input Area */
+#chatbot-input {
+    display: flex;
+    padding: 10px;
+    background: #1E1E1E;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 8px;
+    background: #333;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    outline: none;
+}
+
+#send-btn {
+    background: cyan;
+    color: black;
+    border: none;
+    padding: 8px 12px;
+    margin-left: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Chatbot Button */
+#chatbot-btn {
+    position: fixed;
+    bottom: 75px;
+    right: 20px;
+    background: linear-gradient(to right, #913535, #1e818e);
+    color: black;
+    padding: 12px 18px;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.5);
+    transition: transform 0.3s;
+    z-index: 9999; /* Ensuring button stays above other elements */
+}
+
+#chatbot-btn:hover {
+    transform: scale(1.1);
+}
