@@ -120,6 +120,7 @@ nav a:hover span{
     font-size: 4rem;
     font-weight: bold;
     background: linear-gradient(45deg, #4CB8C4,#3CD3AD);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-stroke: 2px black;
     -webkit-text-fill-color: transparent;
@@ -244,6 +245,41 @@ nav a:hover span{
 .progress-bar-success { background: #ff0000; }
 .progress-bar-info { background: #ff6600; }
 .progress-bar-warning { background: #ffcc00; }
+
+/* Quiz Section*/
+#Quiz{
+    background: linear-gradient(90deg, #913535, #1e818e);
+    padding: 2rem;
+    border-radius: 20px;
+    font-size: 30px;
+    color: #fff;
+    margin-top: 2rem;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.quiz-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    flex-direction: column;
+}
+
+.Quiz-btn{
+    color: #000;
+    background: #fff;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    margin: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
 
 /* Footer section with contact me section */
 
