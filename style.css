@@ -120,6 +120,7 @@ nav a:hover span{
     font-size: 4rem;
     font-weight: bold;
     background: linear-gradient(45deg, #4CB8C4,#3CD3AD);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-stroke: 2px black;
     -webkit-text-fill-color: transparent;

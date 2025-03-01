@@ -1,73 +1,40 @@
+/* General Body Styling */
 body {
     background: #131212;
     font-family: 'Poppins', sans-serif;
 }
 
-h1, h2, h3 {
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-
-@media screen and (max-width:728px) {
-    .intro{
-        width: 100%;
-        margin: 1rem 0;
-    }
-}
-
+/* Header */
 .header {
-    background: linear-gradient(90deg, #913535, #1e818e);
+    background: linear-gradient(90deg, #913535, #1e818e); 
     padding: 5px 0;
     transition: all 0.3s ease-in-out;
 }
 
-.header .logo {
-    color: #0d19f1;
-    font-size: 24px;
-    font-weight: bold;
-    text-shadow: 2px 2px 10px rgba(15, 97, 155, 0.8);
-}
-.navbar-brand{
+.navbar-brand {
     color: rgb(208, 64, 208);
 }
+
 .navbar-nav li a {
     color: #060606 !important;
-    font-size:18px;
+    font-size: 18px;
     font-weight: 600;
     transition: 0.3s;
     margin-top: 12px;
+    margin-right: 15px;
+}
 
-        margin-right: 15px; /* Adjust as needed */
-    
-    
-}
-nav a span{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    border-bottom: 2px solid rgb(5, 5, 5);
-    border-radius: 15px;
-    transform: scale(0) translate Y(50px);
-    opacity: 0;
-    transition: 0.4s;
-}
-nav a:hover span{
-    /* transform: scale(0) translate Y(0px); */
-    opacity: 1;
-}
-.navbar-nav li a:hover {
+nav a:hover {
     color: #000000 !important;
     text-shadow: 2px 2px 10px rgba(32, 126, 173, 0.8);
 }
 
+/* Toggle Button Styling */
 .checkbox {
     opacity: 0;
     position: absolute;
-  }
+}
+
 .checkbox-label {
     background-color: #111;
     width: 70px;
@@ -79,15 +46,9 @@ nav a:hover span{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-  }
-  
-  .fa-moon {color: #f1c40f;font-size:x-large;}
-  
-  .fa-sun {color: #f39c12;font-size: x-large;}
-  body.dark {background-color: #292c35;} /* #9b59b6 */
+}
 
-  body.light h1, body.light {color: #fff;}
-  .checkbox-label .ball {
+.checkbox-label .ball {
     background-color: #fff;
     width: 26px;
     height: 26px;
@@ -95,60 +56,142 @@ nav a:hover span{
     left: 2px;
     border-radius: 50%;
     transition: transform 0.2s linear;
-  }
-  .checkbox:checked + .checkbox-label .ball {
-    transform: translateX(40px);
-  }
-  #quiz-form.light {
-    background-color: #000;
-    color: #fff;
-  }
-  header.light{
-    background: linear-gradient(#a7a3ee ,#d3d3f2,#97e2f1);
-    /* background-color: #fff; */
-    transition: all 0.3s ease-in-out;
 }
 
+.checkbox:checked + .checkbox-label .ball {
+    transform: translateX(40px);
+}
+
+/* Light/Dark Mode Styling */
+body.dark {
+    background-color: #292c35;
+}
+
+body.light {
+    background-color: #f4f4f4;
+}
+
+body.light {
+    color: #111;
+}
+
+header.light {
+    background: linear-gradient(#a7a3ee ,#d3d3f2,#97e2f1);
+}
+
+/* Quiz Form Styling */
 #quiz-form {
     margin: 5px auto;
-    width: 50%;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+    width: 60%;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: #222;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    color: #fff;
 }
 
 #quiz-form h1 {
     text-align: center;
     margin-bottom: 20px;
+    font-size: 32px;
 }
 
 #quiz-form label {
     display: block;
     margin-bottom: 10px;
+    font-size: 18px;
+    color: #bbb;
 }
 
-#quiz-form input[type="text"] {
-    width: 100%;
-    padding: 10px;
+/* Custom Radio Buttons */
+.question {
     margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
 }
 
-#quiz-form input[type="submit"] {
-    padding: 10px 20px;
-    background-color: #333;
+.question:hover {
+    background-color: #444;
+}
+
+/* Remove default radio button styling and add custom design */
+.question input[type="radio"] {
+    display: none;
+}
+
+/* Create a custom radio button */
+.question label {
+    position: relative;
+    padding-left: 40px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    color: #bbb;
+}
+
+.question p{
+    font-size: 18px;
+    color: #bbb;
+}
+
+/* Create the circular "outer" part of the radio button */
+.question label::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    border: 2px solid #bbb;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+/* When the radio button is checked */
+.question input[type="radio"]:checked + label::before {
+    background-color: #f39c12; /* Gold color when checked */
+    border-color: #f39c12;
+}
+
+/* Add inner circle when checked */
+.question input[type="radio"]:checked + label::after {
+    content: '';
+    position: absolute;
+    left: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+/* Hover effect on radio buttons */
+.question label:hover::before {
+    border-color: #ee0505;
+}
+
+#submitQuiz {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #6a11cb;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
 }
 
-#quiz-form input[type="submit"]:hover {
-    background-color: #555;
+#submitQuiz:hover {
+    background-color: #2575fc;
 }
 
+/* Success and Error Messages */
 #quiz-form .error {
     color: red;
     margin-bottom: 10px;
@@ -159,17 +202,27 @@ nav a:hover span{
     margin-bottom: 10px;
 }
 
-#submitQuiz{
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #quiz-form {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .navbar-nav li a {
+        font-size: 16px;
+    }
+
+    #quiz-form h1 {
+        font-size: 28px;
+    }
 }
 
-#submitQuiz:hover {
-    background-color: #555;
+/* Feedback Styling */
+.feedback {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px;
+    transition: all 0.3s ease;
 }
-
