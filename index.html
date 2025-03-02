@@ -32,6 +32,8 @@
 </head>
 
 <body>
+    <div id="loader"><img src="./image/infinite-spinner.svg" alt=""></div>
+    <div id="content">
     <!-- Chatbot Open Button -->
     <button id="chatbot-btn">💬 Ask me</button>
 
@@ -231,7 +233,7 @@
             </div>
         </section>
     </footer>
-
+</div>
 
     <script>
         window.onload = function() {
@@ -256,6 +258,12 @@
         scrollToTopBtn.addEventListener("click", function () {
             window.scrollTo({ top: 0, behavior: "smooth" });
         });
+    </script>
+    <script>
+        setTimeout(() => {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("content").style.display = "block";
+        }, 2000);
     </script>
 </body>
 </html>
