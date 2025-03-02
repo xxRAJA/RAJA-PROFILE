@@ -224,3 +224,14 @@ setThemeBasedOnSystemPreference();
 
 // Listen for changes to the system theme preference
 window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", setThemeBasedOnSystemPreference);
+
+let isToggle = true;
+document.getElementsByClassName('navbar-toggle')[0].addEventListener('click',()=>{
+    if(isToggle){
+        document.getElementById('myNavbar').style.display = 'block';
+        isToggle = false;
+    }else{
+        document.getElementById('myNavbar').style.display = 'none';
+        isToggle = true;
+    }
+});
