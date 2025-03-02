@@ -67,21 +67,6 @@ document.getElementById("close-btn").onclick = function () {
     document.getElementById("chatbot-container").style.display = "none";
 };
 
-// Scroll to Top functionality
-window.onscroll = function () {
-    var scrollButton = document.getElementById("scrollToTopBtn");
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        scrollButton.style.display = "block";  // Show the button
-    } else {
-        scrollButton.style.display = "none";   // Hide the button when near top
-    }
-};
-
-// Scroll to top functionality when button is clicked
-document.getElementById("scrollToTopBtn").onclick = function () {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-};
-
 // Achievement section style
 document.addEventListener("DOMContentLoaded", () => {
     const achievements = document.querySelector('.achievements');
@@ -97,4 +82,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { threshold: 0.5 }); // Trigger when 50% is visible
 
     observer.observe(achievements);
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    // Check if the button is found
+    if (!scrollToTopBtn) {
+        console.error("Error: Button not found!");
+        return;
+    }
+
+    // Show/hide button on scroll
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 200) {
+            scrollToTopBtn.classList.add("show");
+        } else {
+            scrollToTopBtn.classList.remove("show");
+        }
+    });
+
+    // Scroll to the top smoothly
+    scrollToTopBtn.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    });
 });

@@ -909,37 +909,64 @@ textarea:focus {
 }
 
 /* Scroll Button */
-/* Button Styling */
 #scrollToTopBtn {
     position: fixed;
-    bottom: 90px;
-    right: 50px;
-    padding: 10px 20px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    font-weight: bold;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
     color: white;
-    background-color: #ff5100;
+    background: linear-gradient(45deg, #4e54c8, #8f94fb);
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.8), 0 0 20px rgba(0, 123, 255, 0.6);
-    transition: box-shadow 0.3s ease, transform 0.2s ease;
-    z-index: 1000;
-    opacity: 1;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: none;
+    /* Hidden by default */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 2000;
 }
 
+/* Hover Effect */
 #scrollToTopBtn:hover {
-    box-shadow: 0 0 20px rgba(0, 123, 255, 1), 0 0 30px rgba(0, 123, 255, 0.8);
-    transform: scale(1.1);
+    transform: scale(1.2);
+    background: linear-gradient(45deg, #8f94fb, #4e54c8);
 }
 
-/* Button appears when scrolling down */
+/* Show Button on Scroll */
 #scrollToTopBtn.show {
-    opacity: 1;
-    visibility: visible;
+    display: block;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#scrollToTopBtn.float {
+    animation: float 2s ease-in-out infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #scrollToTopBtn {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+        bottom: 20px;
+        right: 20px;
+    }
 }
 
 /* Responsive Design */
