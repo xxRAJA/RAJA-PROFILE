@@ -907,11 +907,10 @@ textarea:focus {
 #chatbot-input button:hover {
     background-color: #005bb5;
 }
-
 /* Scroll Button */
 #scrollToTopBtn {
     position: fixed;
-    bottom: 30px;
+    bottom: 90px;
     right: 30px;
     width: 60px;
     height: 60px;
@@ -922,21 +921,15 @@ textarea:focus {
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    display: none;
-    /* Hidden by default */
     transition: opacity 0.3s ease, transform 0.3s ease;
-    z-index: 2000;
+    z-index: 1;
+    display: block;
 }
 
 /* Hover Effect */
 #scrollToTopBtn:hover {
     transform: scale(1.2);
     background: linear-gradient(45deg, #8f94fb, #4e54c8);
-}
-
-/* Show Button on Scroll */
-#scrollToTopBtn.show {
-    display: block;
 }
 
 /* Floating Animation */
@@ -964,7 +957,7 @@ textarea:focus {
         width: 50px;
         height: 50px;
         font-size: 22px;
-        bottom: 20px;
+        bottom: 90px;
         right: 20px;
     }
 }
