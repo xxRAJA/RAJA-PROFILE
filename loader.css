@@ -1,0 +1,93 @@
+/* loader.css */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Disable overflow and prevent scrolling while loading */
+body,
+html {
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Apply flex only to the loader */
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    color: rgba(255, 255, 255, 1);
+    background: #000000;
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    gap: 5px;
+    letter-spacing: 2px;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+/* Bounce animation */
+.loader span {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: "Roboto Slab", serif;
+    animation: bounce 1.2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+
+    0%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Apply different delays for each span */
+.loader span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.loader span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.loader span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.loader span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.loader span:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.loader span:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.loader span:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+.loader span:nth-child(8) {
+    animation-delay: 0.7s;
+}
+
+.loader span:nth-child(9) {
+    animation-delay: 0.8s;
+}
+
+.loader span:nth-child(10) {
+    animation-delay: 0.9s;
+}
