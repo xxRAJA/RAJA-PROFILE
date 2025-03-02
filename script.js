@@ -204,3 +204,23 @@ function isFitnessRelated(question) {
     
     return isRelated;
 }
+// Function to check system theme preference
+function setThemeBasedOnSystemPreference() {
+    // Detect if dark mode is preferred by the system
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    // If dark mode is preferred, add a 'dark' class to the body
+    if (prefersDarkScheme) {
+        document.body.classList.add("dark");
+        document.body.classList.remove("light");
+    } else {
+        document.body.classList.remove("dark");
+        document.body.classList.add("light");
+    }
+}
+
+// Initial check when page loads
+setThemeBasedOnSystemPreference();
+
+// Listen for changes to the system theme preference
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", setThemeBasedOnSystemPreference);
