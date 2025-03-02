@@ -31,7 +31,9 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head>
 
-<body>
+<body style="cursor: none;">
+    <div class="cursor"></div>
+    <div class="cursor-hover"></div>
     <!-- Chatbot Open Button -->
     <button id="chatbot-btn">💬 Ask me</button>
 
@@ -252,6 +254,30 @@
                 scrollToTopBtn.style.display = "none";
             }
         };
+
+        const cursor = document.querySelector(".cursor");
+        const cursorHover = document.querySelector(".cursor-hover");
+
+        document.addEventListener("mousemove", (e) => {
+            cursor.style.top = `${e.clientY}px`;
+            cursor.style.left = `${e.clientX}px`;
+            cursorHover.style.top = `${e.clientY}px`;
+            cursorHover.style.left = `${e.clientX}px`;
+        });
+
+        // Cursor enlarges when hovering over links
+        document.querySelectorAll("a, button, textarea").forEach(link => {
+            link.addEventListener("mouseenter", () => {
+                cursor.style.width = "20px";
+                cursor.style.height = "20px";
+                cursor.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
+            });
+            link.addEventListener("mouseleave", () => {
+                cursor.style.width = "10px";
+                cursor.style.height = "10px";
+                cursor.style.backgroundColor = "white";
+            });
+        });
 
         scrollToTopBtn.addEventListener("click", function () {
             window.scrollTo({ top: 0, behavior: "smooth" });
