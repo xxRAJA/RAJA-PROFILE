@@ -1,11 +1,11 @@
-
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-html,body{
+html,
+body {
     scrollbar-width: 1px;
     scroll-behavior: smooth;
 }
@@ -39,7 +39,7 @@ body {
     margin-right: auto;
 }
 
-.heading{
+.heading {
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -49,12 +49,12 @@ body {
     font-family: "Russo One", sans-serif;
 }
 
-h1 a:hover{
+h1 a:hover {
     color: gold;
     text-decoration: none;
 }
 
-h1 a:focus{
+h1 a:focus {
     outline: none;
     color: #fff;
     text-decoration: none;
@@ -68,6 +68,7 @@ h1 a:focus{
     margin: 0;
     align-items: center;
 }
+
 .navbar ul li a {
     position: relative;
     font-size: 2rem;
@@ -93,7 +94,7 @@ h1 a:focus{
     transform: scale(1.1);
 }
 
-.navbar ul li a:hover{
+.navbar ul li a:hover {
     text-decoration: none;
 }
 
@@ -107,6 +108,7 @@ h1 a:focus{
 .theme-toggle:hover {
     transform: scale(1.2);
 }
+
 /* Responsive Design */
 .navbar-toggle {
     display: none;
@@ -289,7 +291,7 @@ h1 a:focus{
     background: linear-gradient(135deg, #4CA1AF, #2C3E50);
 }
 
-.achievements h2{
+.achievements h2 {
     text-align: center;
     font-size: 4rem;
     font-family: ubuntu;
@@ -310,7 +312,7 @@ h1 a:focus{
     padding: 8px 12px;
 }
 
-.achievements ul li::before{
+.achievements ul li::before {
     content: '✅';
     padding: 2rem;
 }
@@ -437,16 +439,16 @@ h1 a:focus{
 /* Portfolio Section */
 #portfolio {
     width: 100%;
-    padding: 80px 20px;
-    /* background: linear-gradient(135deg, #2C3E50, #4CA1AF); */
+    padding: 80px 5%;
     background-color: transparent;
     color: #fff;
     text-align: center;
+    box-sizing: border-box;
 }
 
 /* Section Title */
 #portfolio h2 {
-    font-size: 3.5rem;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
     margin-bottom: 4rem;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -463,15 +465,22 @@ h1 a:focus{
     background: #4CA1AF;
     margin: 20px auto 0;
     border-radius: 4px;
+    transition: width 0.4s ease;
+}
+
+#portfolio h2:hover::after {
+    width: 120px;
 }
 
 /* Portfolio Grid */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    /* Default 3 cards in a row */
+    box-sizing: border-box;
 }
 
 /* Portfolio Item */
@@ -481,6 +490,8 @@ h1 a:focus{
     overflow: hidden;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Hover Effect */
@@ -494,31 +505,35 @@ h1 a:focus{
     width: 100%;
     height: auto;
     display: block;
+    object-fit: cover;
 }
 
 /* Portfolio Content */
 .portfolio-content {
     padding: 20px;
     background: linear-gradient(135deg, #2C3E50, #4CA1AF);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 /* Portfolio Headings */
 .portfolio-content h3 {
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 4vw, 2rem);
     margin-bottom: 10px;
     text-transform: uppercase;
 }
 
 .portfolio-content h4 {
-    font-size: 1.5rem;
-    margin-top: 20px;
+    font-size: clamp(1.3rem, 3vw, 1.5rem);
+    margin-top: 10px;
 }
 
 /* Portfolio Text */
 .portfolio-content p {
     font-size: 1.2rem;
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 /* Progress Bar */
@@ -544,21 +559,32 @@ h1 a:focus{
 }
 
 /* Responsive Design */
+
+/* Large Screens (3 cards in a row) */
+@media (min-width: 1024px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 cards in a row */
+    }
+}
+
+/* Medium Screens (2 cards in a row) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 cards in a row */
+    }
+}
+
+/* Small Screens (1 card in a row) */
 @media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        /* 1 card in a row */
+    }
+
     #portfolio {
-        padding: 60px 10px;
-    }
-
-    #portfolio h2 {
-        font-size: 2.8rem;
-    }
-
-    .portfolio-content h3 {
-        font-size: 1.8rem;
-    }
-
-    .portfolio-content h4 {
-        font-size: 1.3rem;
+        padding: 60px 5%;
     }
 
     .portfolio-content p {
@@ -567,26 +593,35 @@ h1 a:focus{
 }
 
 @media (max-width: 480px) {
-    #portfolio h2 {
-        font-size: 2.5rem;
+    #portfolio {
+        padding: 50px 5%;
     }
 
-    .portfolio-content h3 {
-        font-size: 1.6rem;
+    .portfolio-grid {
+        gap: 20px;
     }
 
-    .portfolio-content h4 {
-        font-size: 1.2rem;
+    .portfolio-item {
+        margin: 0;
     }
 
     .portfolio-content p {
         font-size: 1rem;
     }
+
+    #portfolio h2::after {
+        width: 60px;
+    }
+
+    #portfolio h2:hover::after {
+        width: 80px;
+    }
 }
 
-/* Footer style */
 
-footer{
+
+/* Footer style */
+footer {
     background-color: #071030;
     color: #fff;
     text-align: center;
@@ -594,7 +629,7 @@ footer{
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-footer h3{
+footer h3 {
     text-align: center;
     font-family: ubuntu;
     font-size: 4rem;
@@ -682,6 +717,7 @@ textarea:focus {
 .submit-button:hover {
     background-color: #2C3E50;
 }
+
 /* Social Media Section (Right Side) */
 .social-media {
     flex: 1 1 45%;
@@ -872,31 +908,39 @@ textarea:focus {
     background-color: #005bb5;
 }
 
-/* Scroll to Top Button */
+/* Scroll Button */
+/* Button Styling */
 #scrollToTopBtn {
     position: fixed;
-    bottom: 100px;
-    right: 20px;
-    background-color: #0073e6;
+    bottom: 90px;
+    right: 50px;
+    padding: 10px 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
     color: white;
-    font-size: 1.6rem;
-    padding: 15px;
-    border-radius: 50%;
+    background-color: #ff5100;
     border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    display: none;
-    /* Initially hidden */
-    z-index: 5000;
-    /* Ensure it's above other content */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.8), 0 0 20px rgba(0, 123, 255, 0.6);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    z-index: 1000;
+    opacity: 1;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 #scrollToTopBtn:hover {
-    background-color: #005bb5;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 1), 0 0 30px rgba(0, 123, 255, 0.8);
     transform: scale(1.1);
 }
 
+/* Button appears when scrolling down */
+#scrollToTopBtn.show {
+    opacity: 1;
+    visibility: visible;
+}
 
 /* Responsive Design */
 @media (max-width: 480px) {
@@ -913,7 +957,7 @@ textarea:focus {
     }
 
     #scrollToTopBtn {
-        bottom: 20px;
+        bottom: 90px;
         right: 20px;
         font-size: 1.4rem;
     }
