@@ -25,23 +25,27 @@ body {
 .cursor {
     width: 10px;
     height: 10px;
-    background-color: white;
-    transition: width 0.2s ease-out, height 0.2s ease-out, background-color 0.2s ease-out;
+    background: linear-gradient(90deg, #913535, #1e818e);
+    box-shadow: 0 0 12px rgba(30, 129, 142, 0.8);
+    transition: width 0.2s ease-out, height 0.2s ease-out, background-color 0.2s ease-out,  box-shadow 0.2s ease-out;
 }
 
 /* Larger hover cursor */
 .cursor-hover {
     width: 30px;
     height: 30px;
-    border: 2px solid ;
-    transition: width 0.3s ease-out, height 0.3s ease-out;
+    border: 2px solid transparent;
+    /* background: linear-gradient(90deg, #913535, #1e818e); */
+    box-shadow: 0 0 15px rgba(145, 53, 53, 0.8);
+    transition: width 0.3s ease-out, height 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
-/* Cursor effect on links */
-a:hover ~ .cursor-hover {
+a:hover ~ .cursor-hover,
+button:hover ~ .cursor-hover,
+textarea:hover ~ .cursor-hover {
     width: 50px;
     height: 50px;
-    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 15px rgba(120, 60, 120, 0.8);
 }
 #loader{
     position: fixed;
