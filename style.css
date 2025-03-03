@@ -77,6 +77,9 @@ h1, h2, h3 {
     
     
 }
+#myNavbar {
+    transition: all 0.3s ease !important;
+  }
 nav a span{
     position: absolute;
     top: 0;
