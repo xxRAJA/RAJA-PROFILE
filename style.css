@@ -236,11 +236,39 @@ nav a:hover span{
     padding: 50px;
     text-align: center;
 }
+.row{
+    display: flex;
+    justify-self: unset;
+    justify-content: space-evenly;
+    align-items: center;
+    ;
+}
+@media (max-width: 768px){
+    .row{
+        flex-direction: column;
+    }
+}
+
 
 .portfolio-item {
     margin-bottom: 30px;
+    width: 450px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
-
+@media (max-width: 400px){
+    .portfolio-item{
+        width: 100%; 
+        max-width: 200px; 
+    }
+}
+@media (max-width: 600px ){
+    .portfolio-item{
+        width: 100%; 
+        max-width: 400px; 
+    }
+}
 .portfolio-item img {
     border-radius: 10px;
     margin: auto;
