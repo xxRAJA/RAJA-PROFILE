@@ -104,3 +104,101 @@ function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+
+// Chatbot functionality
+        // Wait for DOM to load
+    document.addEventListener("DOMContentLoaded", function() {
+            const chatbotBtn = document.getElementById("chatbot-btn");
+    const chatbotContainer = document.getElementById("chatbot-container");
+    const closeBtn = document.getElementById("close-btn");
+    const sendBtn = document.getElementById("send-btn");
+    const userInput = document.getElementById("user-input");
+
+    // Open Chatbot
+    chatbotBtn.addEventListener("click", function() {
+        chatbotContainer.style.display = "block";
+            });
+
+    // Close Chatbot
+    closeBtn.addEventListener("click", function() {
+        chatbotContainer.style.display = "none";
+            });
+
+    // Send Message on Button Click
+    sendBtn.addEventListener("click", sendMessage);
+
+    // Send Message on Enter Key
+    userInput.addEventListener("keypress", function(event) {
+                if (event.key === "Enter") {
+        sendMessage();
+                }
+            });
+
+    // Initial Welcome Message
+    appendMessage("AI", "Hello! I'm your fitness AI assistant. How can I help you with workouts, diet, or exercise today?");
+        });
+
+    // Send Message Function
+    async function sendMessage() {
+            const userInput = document.getElementById("user-input").value.trim();
+    if (!userInput) return;
+
+    // Display user's message
+    appendMessage("You", userInput);
+    document.getElementById("user-input").value = ""; // Clear input
+
+    // Fetch AI response
+    const response = await fetchGeminiResponse(userInput);
+    appendMessage("AI", response);
+
+    // Scroll to the latest message
+    const messagesDiv = document.getElementById("chatbot-messages");
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+
+    // Append Message to Chat
+    function appendMessage(sender, text) {
+            const messageDiv = document.createElement("div");
+    messageDiv.innerHTML = `<strong>${sender}:</strong> ${text || "Sorry, I couldn't process that."}`;
+    document.getElementById("chatbot-messages").appendChild(messageDiv);
+        }
+
+    // Fetch Response from Gemini API
+    async function fetchGeminiResponse(userMessage) {
+            const API_KEY = "YOUR_GEMINI_API_KEY_HERE"; // Replace with your actual API key
+    const API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${API_KEY}`;
+
+    const requestBody = {
+        contents: [
+    {
+        role: "system",
+    parts: [{text: "You are a fitness expert. Always provide answers related to fitness, workouts, diet, nutrition, and exercise. If a query is unrelated, politely ask the user to rephrase it with a fitness focus." }]
+                    },
+    {
+        role: "user",
+    parts: [{text: userMessage }]
+                    }
+    ]
+            };
+
+    try {
+                const response = await fetch(API_URL, {
+        method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+                    },
+    body: JSON.stringify(requestBody)
+                });
+
+    if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+    const data = await response.json();
+    return data.candidates?.[0]?.content?.parts?.[0]?.text || "I'm not sure about that. Please ask a fitness-related question!";
+            } catch (error) {
+        console.error("API Error:", error);
+    return "Error: Unable to reach the AI. Please try again.";
+            }
+        }
