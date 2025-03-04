@@ -127,6 +127,49 @@ document.getElementById("user-input").addEventListener("keypress", function(even
     if (event.key === "Enter") sendMessage();
 });
 
+document.getElementById("downloadJson").addEventListener("click", function () {
+    // Sample user profile data
+    const userProfile = {
+        name: "John Doe",
+        email: "john.doe@example.com",
+        phone: "+1234567890",
+        skills: ["JavaScript", "Python", "React", "Node.js"],
+        experience: [
+            {
+                company: "Tech Corp",
+                role: "Software Engineer",
+                duration: "2 years"
+            },
+            {
+                company: "Web Solutions",
+                role: "Frontend Developer",
+                duration: "1 year"
+            }
+        ],
+        education: {
+            degree: "B.Tech in Computer Science",
+            university: "XYZ University",
+            year: "2022"
+        }
+    };
+
+    // Convert JSON object to string
+    const jsonData = JSON.stringify(userProfile, null, 2);
+
+    // Create a Blob containing JSON data
+    const blob = new Blob([jsonData], { type: "application/json" });
+
+    // Create a link element to trigger download
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "profile.json";
+
+    // Append link to body, trigger click, then remove
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
+
 // Function to Send Message to Gemini API
 async function sendMessage() {
     let userInput = document.getElementById("user-input").value.trim();
