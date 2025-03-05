@@ -200,6 +200,15 @@
         </div>
     </section>
 
+    <section id="Quiz">
+        <!--Btn for Fitness Quiz-->
+        <div class="quiz-btn">
+            <h1 class="Quiz-head">Fitness Quiz</h1>
+            <p class="Quiz-para">Take this quiz to test your fitness knowledge.</p>
+            <button class="Quiz-btn" onclick="goToQuiz()">Click Here !!</button>
+        </div>
+    </section>
+
 
     <!-- Footer section starts from here with contact me section -->
     <footer>
@@ -258,6 +267,11 @@
         scrollToTopBtn.addEventListener("click", function () {
             window.scrollTo({ top: 0, behavior: "smooth" });
         });
+
+        function goToQuiz() {
+            window.location.href = "quiz.html";
+        }
+
     </script>
     <script>
         setTimeout(() => {

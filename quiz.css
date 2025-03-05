@@ -1,0 +1,289 @@
+/* General Body Styling */
+body {
+    background: #131212;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(90deg, #913535, #1e818e); 
+    padding: 5px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-brand{
+    color: rgb(208, 64, 208);
+}
+.navbar-nav li a {
+    color: #060606 !important;
+    font-size:18px;
+    font-weight: 600;
+    transition: 0.3s;
+    margin-top: 12px;
+
+        margin-right: 15px; /* Adjust as needed */
+    
+    
+}
+nav a span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-bottom: 2px solid rgb(5, 5, 5);
+    border-radius: 15px;
+    transform: scale(0) translate Y(50px);
+    opacity: 0;
+    transition: 0.4s;
+}
+nav a:hover span{
+    /* transform: scale(0) translate Y(0px); */
+    opacity: 1;
+}
+.navbar-nav li a:hover {
+    color: #000000 !important;
+    text-shadow: 2px 2px 10px rgba(32, 126, 173, 0.8);
+}
+
+/* Toggle Button Styling */
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-label {
+    background-color: #111;
+    width: 70px;
+    height: 26px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.checkbox-label .ball {
+    background-color: #fff;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    left: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+    transform: translateX(40px);
+}
+
+/* Light/Dark Mode Styling */
+body.dark {
+    background-color: #292c35;
+}
+
+body.light {
+    background-color: #f4f4f4;
+}
+
+body.light {
+    color: #111;
+}
+
+header.light {
+    background: linear-gradient(#a7a3ee ,#d3d3f2,#97e2f1);
+}
+
+/* Quiz Form Styling */
+#quiz-form {
+    margin: 5px auto;
+    width: 80%; 
+    height: 80%;
+    max-width: 1200px; 
+    padding: 30px;
+    border-radius: 8px;
+    background-color: #222;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+#quiz-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+#quiz-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #bbb;
+}
+
+/* Custom Radio Buttons */
+.question {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 8px;
+    opacity: 0;
+    animation: fadeInQuestion 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeInQuestion {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.question:hover {
+    background-color: #444;
+}
+
+/* Remove default radio button styling and add custom design */
+.question input[type="radio"] {
+    display: none;
+}
+
+/* Create a custom radio button */
+.question label {
+    position: relative;
+    padding-left: 40px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    color: #bbb;
+}
+
+.question p{
+    font-size: 18px;
+    color: #bbb;
+}
+
+/* Create the circular "outer" part of the radio button */
+.question label::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    border: 2px solid #bbb;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+/* When the radio button is checked */
+.question input[type="radio"]:checked + label::before {
+    background-color: #f39c12; /* Gold color when checked */
+    border-color: #f39c12;
+}
+
+/* Add inner circle when checked */
+.question input[type="radio"]:checked + label::after {
+    content: '';
+    position: absolute;
+    left: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+/* Hover effect on radio buttons */
+.question label:hover::before {
+    border-color: #ee0505;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #6a11cb;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    opacity: 0;
+    animation: fadeInButton 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeInButton {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Feedback Styling */
+.feedback {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+
+#submitButton, #nextButton {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #6a11cb;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#submitButton:hover, #nextButton:hover {
+    background-color: #2575fc;
+}
+
+#quiz-form .error {
+    color: red;
+    margin-bottom: 10px;
+}
+
+#quiz-form .success {
+    color: green;
+    margin-bottom: 10px;
+}
+
+#nextButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+@media screen and (max-width: 768px) {
+    #quiz-form {
+        width: 90%;
+        height: 90%;
+        padding: 20px;
+    }
+    
+    .navbar-nav li a {
+        font-size: 16px;
+    }
+    
+    #quiz-form h1 {
+        font-size: 28px;
+    }
+    
+    button {
+        font-size: 16px;
+    }
+}
+
+@keyframes fadeInFeedback {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.feedback {
+    animation: fadeInFeedback 1s ease-in-out;
+}
