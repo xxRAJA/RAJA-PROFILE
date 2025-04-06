@@ -208,6 +208,14 @@
             if (isAnswered) {
                 currentQuestionIndex++; // Move to next question
                 isAnswered = false; // Reset for the next question
+                
+                // Check if all questions have been answered
+                if (currentQuestionIndex >= 10) {
+                    // Redirect to thank you page with score
+                    window.location.href = `thankyou.html?score=${score}`;
+                    return;
+                }
+                
                 hideCurrentQuestion();
                 showNextQuestion();
                 document.getElementById('nextButton').disabled = true; // Disable next button until the question is submitted
