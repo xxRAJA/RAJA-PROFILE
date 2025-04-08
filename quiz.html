@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Fitness Quiz</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="quiz.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    
+</head>
+<body>
+    <!--Navbar-->
+    <header class="header navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">ARYAN THAKUR</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <nav class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#Home" onclick="Home()">Home<span></span></a></li>
+                    <li><a href="#about">About<span></span></a></li>
+                    <li><a href="#portfolio">Portfolio<span></span></a></li>
+                    <li><a href="#contact">Contact<span></span></a></li>
+                    <li><a href="https://store-eight-tau-88.vercel.app/" target="_blank">Store<span></span></a></li>
+
+                    <li>
+                        <input type="checkbox" class="checkbox" id="checkbox">
+                        <label for="checkbox" class="checkbox-label">
+                          <i class="fas fa-sun">🌙</i>
+                          <i class="fas fa-moon">☀️</i>
+                          <span class="ball"></span>
+                        </label>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <br><br><br><br><br>
+    
+    <!--Quiz form-->
+    <div id="quiz-form">
+        <form action="#">
+            <h1 id="quizTitle">Fitness Quiz</h1>
+            <div id="quizQuestions">
+                <ul id="question-list">
+                    <li class="question" data-question="q1">
+                        <p for="q1">1. What is the best exercise to build core strength?</p><br>
+                        <input type="radio" id="q1_a1" name="q1" value="planks"> <label for="q1_a1">Planks</label><br>
+                        <input type="radio" id="q1_a2" name="q1" value="squats"> <label for="q1_a2">Squats</label><br>
+                        <input type="radio" id="q1_a3" name="q1" value="pushups"> <label for="q1_a3">Push-ups</label><br>
+                    </li>
+            
+                    <li class="question" data-question="q2" style="display: none;">
+                        <p for="q2">2. How many days a week should you work out for optimal fitness?</p><br>
+                        <input type="radio" id="q2_a1" name="q2" value="3"> <label for="q2_a1">3 days</label><br>
+                        <input type="radio" id="q2_a2" name="q2" value="5"> <label for="q2_a2">5 days</label><br>
+                        <input type="radio" id="q2_a3" name="q2" value="7"> <label for="q2_a3">7 days</label><br>
+                    </li>
+            
+                    <li class="question" data-question="q3" style="display: none;">
+                        <p for="q3">3. What is the best time to work out?</p><br>
+                        <input type="radio" id="q3_a1" name="q3" value="morning"> <label for="q3_a1">Morning</label><br>
+                        <input type="radio" id="q3_a2" name="q3" value="afternoon"> <label for="q3_a2">Afternoon</label><br>
+                        <input type="radio" id="q3_a3" name="q3" value="evening"> <label for="q3_a3">Evening</label><br>
+                    </li>
+            
+                    <li class="question" data-question="q4" style="display: none;">
+                        <p for="q4">4. What is a good warm-up before a workout?</p><br>
+                        <input type="radio" id="q4_a1" name="q4" value="stretching"> <label for="q4_a1">Stretching</label><br>
+                        <input type="radio" id="q4_a2" name="q4" value="jumping jacks"> <label for="q4_a2">Jumping jacks</label><br>
+                        <input type="radio" id="q4_a3" name="q4" value="light cardio"> <label for="q4_a3">Light cardio</label><br>
+                    </li>
+            
+                    <li class="question" data-question="q5" style="display: none;">
+                        <p for="q5">5. What should you drink before a workout?</p><br>
+                        <input type="radio" id="q5_a1" name="q5" value="water"> <label for="q5_a1">Water</label><br>
+                        <input type="radio" id="q5_a2" name="q5" value="sports drink"> <label for="q5_a2">Sports drink</label><br>
+                        <input type="radio" id="q5_a3" name="q5" value="coffee"> <label for="q5_a3">Coffee</label><br>
+                    </li>
+            
+                    <li class="question" data-question="q6" style="display: none;">
+                        <p for="q6">6. How long should a workout session last?</p><br>
+                        <input type="radio" id="q6_a1" name="q6" value="30 minutes"> <label for="q6_a1">30 minutes</label><br>
+                        <input type="radio" id="q6_a2" name="q6" value="60 minutes"> <label for="q6_a2">60 minutes</label><br>
+                        <input type="radio" id="q6_a3" name="q6" value="90 minutes"> <label for="q6_a3">90 minutes</label><br>
+                    </li>
+            
+                    <li class="question" data-question="q7" style="display: none;">
+                        <p for="q7">7. What is a good post-workout recovery food?</p><br>
+                        <input type="radio" id="q7_a1" name="q7" value="banana"> <label for="q7_a1">Banana</label><br>
+                        <input type="radio" id="q7_a2" name="q7" value="protein shake"> <label for="q7_a2">Protein shake</label><br>
+                        <input type="radio" id="q7_a3" name="q7" value="chips"> <label for="q7_a3">Chips</label><br>
+                    </li>
+            
+                    <li class="question" data-question="q8" style="display: none;">
+                        <p for="q8">8. Which exercise helps to tone your legs?</p><br>
+                        <input type="radio" id="q8_a1" name="q8" value="squats"> <label for="q8_a1">Squats</label><br>
+                        <input type="radio" id="q8_a2" name="q8" value="pushups"> <label for="q8_a2">Push-ups</label><br>
+                        <input type="radio" id="q8_a3" name="q8" value="pull-ups"> <label for="q8_a3">Pull-ups</label><br>
+                    </li>
+            
+                    <li class="question" data-question="q9" style="display: none;">
+                        <p for="q9">9. How many hours of sleep do you need for recovery?</p><br>
+                        <input type="radio" id="q9_a1" name="q9" value="4"> <label for="q9_a1">4 hours</label><br>
+                        <input type="radio" id="q9_a2" name="q9" value="6"> <label for="q9_a2">6 hours</label><br>
+                        <input type="radio" id="q9_a3" name="q9" value="8"> <label for="q9_a3">8 hours</label><br>
+                    </li>
+            
+                    <li class="question" data-question="q10" style="display: none;">
+                        <p for="q10">10. What is a good cardio exercise?</p><br>
+                        <input type="radio" id="q10_a1" name="q10" value="running"> <label for="q10_a1">Running</label><br>
+                        <input type="radio" id="q10_a2" name="q10" value="lifting weights"> <label for="q10_a2">Lifting weights</label><br>
+                        <input type="radio" id="q10_a3" name="q10" value="yoga"> <label for="q10_a3">Yoga</label><br>
+                    </li>
+                </ul>
+                <!-- Submit Button -->
+                <button type="button" id="submitButton">Submit</button>
+
+                <!-- Next Button -->
+                <button type="button" id="nextButton" disabled>Next</button>
+            </div>
+            <br/>
+            <br/>
+            <p>Score: <span id="currentScore">0</span></p>
+        </form>
+    </div>
+
+    <script>
+        const correctAnswers = {
+            q1: "planks",
+            q2: "5",
+            q3: "morning",
+            q4: "light cardio",
+            q5: "water",
+            q6: "60 minutes",
+            q7: "protein shake",
+            q8: "squats",
+            q9: "8",
+            q10: "running"
+        };
+
+        let score = 0;
+        let currentQuestionIndex = 0;
+        let isAnswered = false; // Track if the user has answered the question
+
+        // Function to show the next question
+        function showNextQuestion() {
+            const questions = document.querySelectorAll('.question');
+            if (currentQuestionIndex < questions.length) {
+                questions[currentQuestionIndex].style.display = "block"; // Show current question
+            }
+        }
+
+        // Function to hide the current question
+        function hideCurrentQuestion() {
+            const questions = document.querySelectorAll('.question');
+            if (currentQuestionIndex < questions.length) {
+                questions[currentQuestionIndex-1].style.display = "none"; // Hide current question
+            }
+        }
+
+        // Function to update the live score
+        function updateScore() {
+            document.getElementById('currentScore').textContent = score; // Update the displayed score
+        }
+
+        // Function to handle submitting the answer
+        function submitAnswer() {
+            const selectedAnswer = document.querySelector(`input[name="q${currentQuestionIndex + 1}"]:checked`);
+            if (selectedAnswer) {
+                const correctAnswer = correctAnswers[`q${currentQuestionIndex + 1}`];
+                const feedback = document.createElement('p');
+                feedback.textContent = selectedAnswer.value === correctAnswer ? 'Correct!' : `Incorrect! The correct answer is ${correctAnswer}`;
+                
+                const questionElement = document.querySelector(`.question[data-question="q${currentQuestionIndex + 1}"]`);
+                questionElement.appendChild(feedback); // Show feedback under the question
+
+                // Update score if the answer is correct
+                if (selectedAnswer.value === correctAnswer) {
+                    score++;
+                    updateScore(); // Update live score
+                }
+            }
+
+            // Disable next button after submit
+            document.getElementById('nextButton').disabled = false;
+            isAnswered = true; // Mark as answered
+        }
+
+        // Function to handle moving to the next question
+        function moveToNextQuestion() {
+            if (isAnswered) {
+                currentQuestionIndex++; // Move to next question
+                isAnswered = false; // Reset for the next question
+                
+                // Check if all questions have been answered
+                if (currentQuestionIndex >= 10) {
+                    // Redirect to thank you page with score
+                    window.location.href = `thankyou.html?score=${score}`;
+                    return;
+                }
+                
+                hideCurrentQuestion();
+                showNextQuestion();
+                document.getElementById('nextButton').disabled = true; // Disable next button until the question is submitted
+            } else {
+                alert("Please submit your answer before moving to the next question.");
+            }
+        }
+
+        // Initializing the quiz with the first question
+        document.addEventListener("DOMContentLoaded", function() {
+            showNextQuestion(); // Show the first question when the page loads
+        });
+
+        // Event listener for the submit button
+        document.getElementById('submitButton').addEventListener('click', submitAnswer);
+
+        // Event listener for the next button
+        document.getElementById('nextButton').addEventListener('click', moveToNextQuestion);
+
+
+        // Toggle light/dark theme
+        const checkbox = document.getElementById('checkbox');
+        checkbox.addEventListener('change', () => {
+            document.body.classList.toggle('light');
+            document.querySelector('header').classList.toggle('light');
+            document.querySelector('#quiz-form').classList.toggle('light');
+        });
+
+        function Home() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

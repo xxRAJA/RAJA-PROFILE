@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Completed - Thank You</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <!--Navbar-->
+    <header class="header navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">ARYAN THAKUR</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <nav class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home<span></span></a></li>
+                    <li><a href="#about">About<span></span></a></li>
+                    <li><a href="#portfolio">Portfolio<span></span></a></li>
+                    <li><a href="#contact">Contact<span></span></a></li>
+                    <li><a href="https://store-eight-tau-88.vercel.app/" target="_blank">Store<span></span></a></li>
+
+                    <li>
+                        <input type="checkbox" class="checkbox" id="checkbox">
+                        <label for="checkbox" class="checkbox-label">
+                          <i class="fas fa-sun">🌙</i>
+                          <i class="fas fa-moon">☀️</i>
+                          <span class="ball"></span>
+                        </label>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <br><br><br><br><br>
+    
+    <!-- Thank You Content -->
+    <div id="thankyou-container">
+        <div class="thankyou-content">
+            <h1>Thank You for Completing the Fitness Quiz!</h1>
+            <div class="score-display">
+                <h2>Your Final Score: <span id="finalScore">0</span> out of 10</h2>
+            </div>
+            <div class="results-message" id="resultsMessage">
+                <!-- Results message will be added by JavaScript -->
+            </div>
+            <div class="action-buttons">
+                <button id="retakeQuizBtn" class="action-button">Retake Quiz</button>
+                <button id="homeBtn" class="action-button">Return Home</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get score from URL parameter
+        function getScoreFromUrl() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('score') || 0;
+        }
+
+        // Display appropriate message based on score
+        function displayResultMessage(score) {
+            const resultsElement = document.getElementById('resultsMessage');
+            let message = '';
+            
+            if (score >= 8) {
+                message = 'Excellent! You\'re a fitness expert!';
+            } else if (score >= 5) {
+                message = 'Good job! You have solid fitness knowledge.';
+            } else {
+                message = 'Thanks for taking the quiz! Keep learning about fitness.';
+            }
+            
+            resultsElement.innerHTML = `<p>${message}</p>`;
+        }
+
+        // When the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get and display score
+            const score = getScoreFromUrl();
+            document.getElementById('finalScore').textContent = score;
+            
+            // Display result message
+            displayResultMessage(score);
+            
+            // Add button event listeners
+            document.getElementById('retakeQuizBtn').addEventListener('click', function() {
+                window.location.href = 'quiz.html';
+            });
+            
+            document.getElementById('homeBtn').addEventListener('click', function() {
+                window.location.href = 'index.html';
+            });
+            
+            // Toggle light/dark theme
+            const checkbox = document.getElementById('checkbox');
+            checkbox.addEventListener('change', () => {
+                document.body.classList.toggle('light');
+                document.querySelector('header').classList.toggle('light');
+                document.querySelector('#thankyou-container').classList.toggle('light');
+            });
+        });
+    </script>
+
+    <style>
+        #thankyou-container {
+            margin: 5px auto;
+            width: 80%;
+            max-width: 800px;
+            padding: 40px;
+            border-radius: 8px;
+            background-color: #222;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            color: #fff;
+            text-align: center;
+        }
+        
+        #thankyou-container.light {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        
+        .thankyou-content h1 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #6a11cb;
+        }
+        
+        .score-display {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 8px;
+        }
+        
+        #thankyou-container.light .score-display {
+            background-color: #e0e0e0;
+        }
+        
+        .score-display h2 {
+            font-size: 28px;
+        }
+        
+        #finalScore {
+            font-size: 36px;
+            font-weight: bold;
+            color: #f39c12;
+        }
+        
+        .results-message {
+            margin: 30px 0;
+            font-size: 20px;
+        }
+        
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .action-button {
+            padding: 12px 25px;
+            background-color: #6a11cb;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            font-size: 18px;
+        }
+        
+        .action-button:hover {
+            background-color: #2575fc;
+        }
+    </style>
+</body>
+</html> 
